@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0-beta19
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+{% load static %}
+<html lang="en" dir="rtl" >
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'static/favicon.ico' %}"/>
+    <title>RTL mode - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+    <!-- CSS files -->
+    {% block extrastyle %}{% endblock extrastyle %}
+    <link href="{% static 'dist/css/tabler.rtl.min.css' %}?1684106062" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-flags.rtl.min.css' %}?1684106062" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-payments.rtl.min.css' %}?1684106062" rel="stylesheet"/>
+    <link href="{% static 'dist/css/tabler-vendors.rtl.min.css' %}?1684106062" rel="stylesheet"/>
+    <link href="{% static 'dist/css/demo.rtl.min.css' %}?1684106062" rel="stylesheet"/>
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      :root {
+      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+      }
+      body {
+      	font-feature-settings: "cv03", "cv04", "cv11";
+      }
+    </style>
+  </head>
+  <body >
+    <script src="{% static 'dist/js/demo-theme.min.js' %}?1684106062"></script>
+    <div class="page">
+      <!-- Navbar -->
+      {% block navigation %}
+        {% include 'includes/navigation.html' %}
+      {% endblock navigation %}
+      {% block sidebar %}
+        {% include 'includes/sidebar.html' %}
+      {% endblock sidebar %}
+      {% block content %}{% endblock content %}
+    </div>
+    {% block modal %}{% endblock modal %}
+
+    {% include 'includes/scripts.html' %}
+    {% block extrajs %}{% endblock extrajs %}
+  </body>
+</html>

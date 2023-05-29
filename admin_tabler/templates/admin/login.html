@@ -1,0 +1,84 @@
+{% extends 'layouts/base-auth.html' %}
+{% load i18n static admin_tabler %}
+
+{% block title %}Sign in - {% endblock title %}
+
+{% block body %}d-flex flex-column{% endblock body %}
+
+{% block content %}
+
+  <div class="page page-center">
+    <div class="container container-tight py-4">
+      <div class="text-center mb-4">
+        <a href="{% url 'index' %}" class="navbar-brand navbar-brand-autodark"><img src="{% static 'static/logo.svg' %}" height="36" alt=""></a>
+      </div>
+      <div class="card card-md">
+        <div class="card-body">
+          <h2 class="h2 text-center mb-4">Login to your account</h2>
+          <form method="post">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+              {% for error in form.non_field_errors %}
+                <span class="text-danger d-block mb-3">{{ error }}</span>
+              {% endfor %}
+            {% endif %}
+
+            <div class="mb-3">
+              <label class="form-label">{{ form.username.label }}</label>
+              <input type="text" class="form-control" id="{{ form.username.id_for_label }}" name="{{ form.username.name }}" placeholder="Username">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">
+                {{ form.password.label }}
+              </label>
+              <div class="input-group input-group-flat">
+                <input type="password" class="form-control" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}" placeholder="Password">
+                <span class="input-group-text">
+                  <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" /></svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary w-100">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+{% block extrajs %}
+<script type="application/javascript">
+    {% if form.username.errors %}
+        notification.danger("{{ form.username.errors }}", 'top', 'right');
+    {% endif %}
+    {% if form.password.errors %}
+        notification.danger("{{ form.password.errors }}", 'top', 'right');
+    {% endif %}
+
+    {% if user.is_authenticated %}
+        var msg = "You are authenticated as {{ username }}, but are not authorized to " +
+            "access this page.Would you like to login to a different account ?"
+        notification.warning(msg, 'top', 'right');
+    {% endif %}
+
+    {% if form.errors and not form.non_field_errors %}
+        {% if form.errors.items|length == 1 %}
+            notification.warning("{% trans "Please correct the error below." %}", 'top', 'right');
+        {% else %}
+            notification.warning("{% trans "Please correct the errors below." %}", 'top', 'right');
+        {% endif %}
+    {% endif %}
+
+    {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+            notification.warning("{{ error|clean_text }}", 'top', 'right');
+        {% endfor %}
+    {% endif %}
+</script>
+{% endblock %}

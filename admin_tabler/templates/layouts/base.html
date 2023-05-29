@@ -1,0 +1,41 @@
+<!doctype html>
+<!--
+* Tabler - Premium and Open Source dashboard template with responsive and high quality UI.
+* @version 1.0.0-beta19
+* @link https://tabler.io
+* Copyright 2018-2023 The Tabler Authors
+* Copyright 2018-2023 codecalm.net Paweł Kuna
+* Licensed under MIT (https://github.com/tabler/tabler/blob/master/LICENSE)
+-->
+{% load i18n static admin_tabler %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% get_direction as direction %}
+{% get_admin_setting as admin_setting %}
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock title %} Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+    {% block extrastyle %}{% endblock extrastyle %}
+    {% include 'includes/head.html' %}
+    {% block extrahead %}{% endblock extrahead %}
+  </head>
+  <body class="{% block body %}{% endblock body %}">
+    <script src="{% static 'dist/js/demo-theme.min.js' %}?1684106062"></script>
+    <div class="page">
+        <!-- Navbar -->
+        {% block navigation %}
+            {% include 'includes/navigation.html' %}
+        {% endblock navigation %}
+        {% block sidebar %}
+            {% include 'includes/sidebar.html' %}
+        {% endblock sidebar %}
+        {% block content %}{% endblock content %}
+    </div>
+    {% block modal %}{% endblock modal %}
+    <!-- Tabler Core -->
+    {% block scripts %}
+        {% include 'includes/scripts.html' %}
+    {% endblock scripts %}
+    {% block extrajs %}{% endblock extrajs %}
+  </body>
+</html>
