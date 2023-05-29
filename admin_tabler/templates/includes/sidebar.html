@@ -1,0 +1,412 @@
+<header class="navbar-expand-md">
+    <div class="collapse navbar-collapse" id="navbar-menu">
+      <div class="navbar">
+        <div class="container-xl">
+          <ul class="navbar-nav">
+            <li class="nav-item {% if 'index' in segment %}active{% endif %}">
+              <a class="nav-link" href="{% url 'index' %}" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                </span>
+                <span class="nav-link-title">
+                  Home
+                </span>
+              </a>
+            </li>
+            <li class="nav-item dropdown {% if 'interface' in parent %}active{% endif %}">
+              <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" /><path d="M12 12l8 -4.5" /><path d="M12 12l0 9" /><path d="M12 12l-8 -4.5" /><path d="M16 5.25l-8 4.5" /></svg>
+                </span>
+                <span class="nav-link-title">
+                  Interface
+                </span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-menu-columns">
+                  <div class="dropdown-menu-column">
+                    <a class="dropdown-item {% if 'accordion' in segment %}active{% endif %}" href="{% url 'accordion' %}">
+                      Accordion
+                    </a>
+                    <a class="dropdown-item {% if 'blank_page' in segment %}active{% endif %}" href="{% url 'blank_page' %}">
+                      Blank page
+                    </a>
+                    <a class="dropdown-item {% if 'badges' in segment %}active{% endif %}" href="{% url 'badges' %}">
+                      Badges
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'button' in segment %}active{% endif %}" href="{% url 'buttons' %}">
+                      Buttons
+                    </a>
+                    <div class="dropend">
+                      <a class="dropdown-item dropdown-toggle" href="#sidebar-cards" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                        Cards
+                        <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                      </a>
+                      <div class="dropdown-menu {% if 'cards' in segment %}active{% endif %}">
+                        <a href="{% url 'cards' %}" class="dropdown-item">
+                          Sample cards
+                        </a>
+                        <a href="{% url 'card_actions' %}" class="dropdown-item">
+                          Card actions
+                          <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                        </a>
+                        <a href="{% url 'cards_masonry' %}" class="dropdown-item">
+                          Cards Masonry
+                        </a>
+                      </div>
+                    </div>
+                    <a class="dropdown-item {% if 'colors' in segment %}active{% endif %}" href="{% url 'colors' %}">
+                      Colors
+                    </a>
+                    <a class="dropdown-item {% if 'data_grid' in segment %}active{% endif %}" href="{% url 'data_grid' %}">
+                      Data grid
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'datatables' in segment %}active{% endif %}" href="{% url 'datatables' %}">
+                      Datatables
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'dropdowns' in segment %}active{% endif %}" href="{% url 'dropdowns' %}">
+                      Dropdowns
+                    </a>
+                    <a class="dropdown-item {% if 'modals' in segment %}active{% endif %}" href="{% url 'modals' %}">
+                      Modals
+                    </a>
+                    <a class="dropdown-item {% if 'maps' in segment %}active{% endif %}" href="{% url 'maps' %}">
+                      Maps
+                    </a>
+                    <a class="dropdown-item {% if 'map_fullsize' in segment %}active{% endif %}" href="{% url 'map_fullsize' %}">
+                      Map fullsize
+                    </a>
+                    <a class="dropdown-item {% if 'vector_maps' in segment %}active{% endif %}" href="{% url 'vector_maps' %}">
+                      Vector maps
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'navigation' in segment %}active{% endif %}" href="{% url 'navigation' %}">
+                      Navigation
+                    </a>
+                    <a class="dropdown-item {% if 'charts' in segment %}active{% endif %}" href="{% url 'charts' %}">
+                      Charts
+                    </a>
+                    <a class="dropdown-item {% if 'pagination' in segment %}active{% endif %}" href="{% url 'pagination' %}">
+                      <!-- Download SVG icon from http://tabler-icons.io/i/pie-chart -->
+                      Pagination
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-column">
+                    <a class="dropdown-item {% if 'placeholder' in segment %}active{% endif %}" href="{% url 'placeholder' %}">
+                      Placeholder
+                    </a>
+                    <a class="dropdown-item {% if 'steps' in segment %}active{% endif %}" href="{% url 'steps' %}">
+                      Steps
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'stars_rating' in segment %}active{% endif %}" href="{% url 'stars_rating' %}">
+                      Stars rating
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'tabs' in segment %}active{% endif %}" href="{% url 'tabs' %}">
+                      Tabs
+                    </a>
+                    <a class="dropdown-item {% if 'tables' in segment %}active{% endif %}" href="{% url 'tables' %}">
+                      Tables
+                    </a>
+                    <a class="dropdown-item {% if 'carousel' in segment %}active{% endif %}" href="{% url 'carousel' %}">
+                      Carousel
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'lists' in segment %}active{% endif %}" href="{% url 'lists' %}">
+                      Lists
+                    </a>
+                    <a class="dropdown-item {% if 'typography' in segment %}active{% endif %}" href="{% url 'typography' %}">
+                      Typography
+                    </a>
+                    <a class="dropdown-item {% if 'offcanvas' in segment %}active{% endif %}" href="{% url 'offcanvas' %}">
+                      Offcanvas
+                    </a>
+                    <a class="dropdown-item {% if 'markdown' in segment %}active{% endif %}" href="{% url 'markdown' %}">
+                      Markdown
+                    </a>
+                    <a class="dropdown-item {% if 'dropzone' in segment %}active{% endif %}" href="{% url 'dropzone' %}">
+                      Dropzone
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'lightbox' in segment %}active{% endif %}" href="{% url 'lightbox' %}">
+                      Lightbox
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'tinymce' in segment %}active{% endif %}" href="{% url 'tinymce' %}">
+                      TinyMCE
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'inline_player' in segment %}active{% endif %}" href="{% url 'inline_player' %}">
+                      Inline player
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <div class="dropend">
+                      <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                        Authentication
+                      </a>
+                      <div class="dropdown-menu">
+                        <a href="{% url 'login' %}" class="dropdown-item">
+                          Sign in
+                        </a>
+                        <a href="{% url 'login_link' %}" class="dropdown-item">
+                          Sign in link
+                        </a>
+                        <a href="{% url 'login_illustration' %}" class="dropdown-item">
+                          Sign in with illustration
+                        </a>
+                        <a href="{% url 'login_cover' %}" class="dropdown-item">
+                          Sign in with cover
+                        </a>
+                        <a href="{% url 'register' %}" class="dropdown-item">
+                          Sign up
+                        </a>
+                        <a href="{% url 'forgot_password' %}" class="dropdown-item">
+                          Forgot password
+                        </a>
+                        <a href="{% url 'terms_service' %}" class="dropdown-item">
+                          Terms of service
+                        </a>
+                        <a href="{% url 'lock_screen' %}" class="dropdown-item">
+                          Lock screen
+                        </a>
+                      </div>
+                    </div>
+                    <div class="dropend">
+                      <a class="dropdown-item dropdown-toggle" href="#sidebar-error" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                        <!-- Download SVG icon from http://tabler-icons.io/i/file-minus -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 14l6 0" /></svg>
+                        Error pages
+                      </a>
+                      <div class="dropdown-menu">
+                        <a href="{% url 'error_404' %}" class="dropdown-item">
+                          404 page
+                        </a>
+                        <a href="{% url 'error_500' %}" class="dropdown-item">
+                          500 page
+                        </a>
+                        <a href="{% url 'maintenance' %}" class="dropdown-item">
+                          Maintenance page
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item {% if 'form_elements' in segment %}active{% endif %}">
+              <a class="nav-link" href="{% url 'form_elements' %}" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+                </span>
+                <span class="nav-link-title">
+                  Form elements
+                </span>
+              </a>
+            </li>
+            <li class="nav-item dropdown {% if 'extra' in parent %}active{% endif %}">
+              <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
+                </span>
+                <span class="nav-link-title">
+                  Extra
+                </span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-menu-columns">
+                  <div class="dropdown-menu-column">
+                    <a class="dropdown-item {% if 'empty_page' in segment %}active{% endif %}" href="{% url 'empty_page' %}">
+                      Empty page
+                    </a>
+                    <a class="dropdown-item {% if 'cookie_banner' in segment %}active{% endif %}" href="{% url 'cookie_banner' %}">
+                      Cookie banner
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'activity' in segment %}active{% endif %}" href="{% url 'activity' %}">
+                      Activity
+                    </a>
+                    <a class="dropdown-item {% if 'gallery' in segment %}active{% endif %}" href="{% url 'gallery' %}">
+                      Gallery
+                    </a>
+                    <a class="dropdown-item {% if 'invoice' in segment %}active{% endif %}" href="{% url 'invoice' %}">
+                      Invoice
+                    </a>
+                    <a class="dropdown-item {% if 'search_results' in segment %}active{% endif %}" href="{% url 'search_results' %}">
+                      Search results
+                    </a>
+                    <a class="dropdown-item {% if 'pricing_cards' in segment %}active{% endif %}" href="{% url 'pricing_cards' %}">
+                      Pricing cards
+                    </a>
+                    <a class="dropdown-item {% if 'pricing_table' in segment %}active{% endif %}" href="{% url 'pricing_table' %}">
+                      Pricing table
+                    </a>
+                    <a class="dropdown-item {% if 'faq' in segment %}active{% endif %}" href="{% url 'faq' %}">
+                      FAQ
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'users' in segment %}active{% endif %}" href="{% url 'users' %}">
+                      Users
+                    </a>
+                    <a class="dropdown-item {% if 'license' in segment %}active{% endif %}" href="{% url 'license' %}">
+                      License
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-column">
+                    <a class="dropdown-item {% if 'logs' in segment %}active{% endif %}" href="{% url 'logs' %}">
+                      Logs
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'music' in segment %}active{% endif %}" href="{% url 'music' %}">
+                      Music
+                    </a>
+                    <a class="dropdown-item {% if 'photogrid' in segment %}active{% endif %}" href="{% url 'photogrid' %}">
+                      Photogrid
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'tasks' in segment %}active{% endif %}" href="{% url 'tasks' %}">
+                      Tasks
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'uptime' in segment %}active{% endif %}" href="{% url 'uptime' %}">
+                      Uptime monitor
+                    </a>
+                    <a class="dropdown-item {% if 'widgets' in segment %}active{% endif %}" href="{% url 'widgets' %}">
+                      Widgets
+                    </a>
+                    <a class="dropdown-item {% if 'wizard' in segment %}active{% endif %}" href="{% url 'wizard' %}">
+                      Wizard
+                    </a>
+                    <a class="dropdown-item {% if 'settings' in segment %}active{% endif %}" href="{% url 'settings' %}">
+                      Settings
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'trial_ended' in segment %}active{% endif %}" href="{% url 'trial_ended' %}">
+                      Trial ended
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'job_listing' in segment %}active{% endif %}" href="{% url 'job_listing' %}">
+                      Job listing
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'page_loader' in segment %}active{% endif %}" href="{% url 'page_loader' %}">
+                      Page loader
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown {% if 'layout' in parent %}active{% endif %}">
+              <a class="nav-link dropdown-toggle" href="#navbar-layout" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/layout-2 -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M4 13m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M14 4m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /><path d="M14 15m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z" /></svg>
+                </span>
+                <span class="nav-link-title">
+                  Layout
+                </span>
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-menu-columns">
+                  <div class="dropdown-menu-column">
+                    <a class="dropdown-item {% if 'layout_horizontal' in segment %}active{% endif %}" href="{% url 'layout_horizontal' %}">
+                      Horizontal
+                    </a>
+                    <a class="dropdown-item {% if 'layout_boxed' in segment %}active{% endif %}" href="{% url 'layout_boxed' %}">
+                      Boxed
+                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                    </a>
+                    <a class="dropdown-item {% if 'layout_vertical' in segment %}active{% endif %}" href="{% url 'layout_vertical' %}">
+                      Vertical
+                    </a>
+                    <a class="dropdown-item {% if 'layout_vertical_transparent' in segment %}active{% endif %}" href="{% url 'layout_vertical_transparent' %}">
+                      Vertical transparent
+                    </a>
+                    <a class="dropdown-item {% if 'layout_vertical_right' in segment %}active{% endif %}" href="{% url 'layout_vertical_right' %}">
+                      Right vertical
+                    </a>
+                    <a class="dropdown-item {% if 'layout_condensed' in segment %}active{% endif %}" href="{% url 'layout_condensed' %}">
+                      Condensed
+                    </a>
+                    <a class="dropdown-item {% if 'layout_combined' in segment %}active{% endif %}" href="{% url 'layout_combined' %}">
+                      Combined
+                    </a>
+                  </div>
+                  <div class="dropdown-menu-column">
+                    <a class="dropdown-item {% if 'layout_navbar_dark' in segment %}active{% endif %}" href="{% url 'layout_navbar_dark' %}">
+                      Navbar dark
+                    </a>
+                    <a class="dropdown-item {% if 'layout_navbar_sticky' in segment %}active{% endif %}" href="{% url 'layout_navbar_sticky' %}">
+                      Navbar sticky
+                    </a>
+                    <a class="dropdown-item {% if 'layout_navbar_overlap' in segment %}active{% endif %}" href="{% url 'layout_navbar_overlap' %}">
+                      Navbar overlap
+                    </a>
+                    <a class="dropdown-item {% if 'layout_rtl' in segment %}active{% endif %}" href="{% url 'layout_rtl' %}">
+                      RTL mode
+                    </a>
+                    <a class="dropdown-item {% if 'layout_fluid' in segment %}active{% endif %}" href="{% url 'layout_fluid' %}">
+                      Fluid
+                    </a>
+                    <a class="dropdown-item {% if 'layout_fluid_vertical' in segment %}active{% endif %}" href="{% url 'layout_fluid_vertical' %}">
+                      Fluid vertical
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item {% if 'icons' in segment %}active{% endif %}">
+              <a class="nav-link" href="{% url 'icons' %}" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/ghost -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 11a7 7 0 0 1 14 0v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-7" /><path d="M10 10l.01 0" /><path d="M14 10l.01 0" /><path d="M10 14a3.5 3.5 0 0 0 4 0" /></svg>
+                </span>
+                <span class="nav-link-title">
+                  4158 icons
+                </span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/lifebuoy -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M15 15l3.35 3.35" /><path d="M9 15l-3.35 3.35" /><path d="M5.65 5.65l3.35 3.35" /><path d="M18.35 5.65l-3.35 3.35" /></svg>
+                </span>
+                <span class="nav-link-title">
+                  Help
+                </span>
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="https://tabler.io/docs" target="_blank" rel="noopener">
+                  Documentation
+                </a>
+                <a class="dropdown-item" href="{% url 'changelog' %}">
+                  Changelog
+                </a>
+                <a class="dropdown-item" href="https://github.com/tabler/tabler" target="_blank" rel="noopener">
+                  Source code
+                </a>
+                <a class="dropdown-item text-pink" href="https://github.com/sponsors/codecalm" target="_blank" rel="noopener">
+                  <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-inline me-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
+                  Sponsor project!
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
+            <form action="./" method="get" autocomplete="off" novalidate>
+              <div class="input-icon">
+                <span class="input-icon-addon">
+                  <!-- Download SVG icon from http://tabler-icons.io/i/search -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                </span>
+                <input type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
