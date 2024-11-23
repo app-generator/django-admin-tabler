@@ -2,7 +2,7 @@
 
 Modern template for **[Django Admin](https://app-generator.dev/docs/products/django-libs/theme-tabler.html)**, Auth Pages (registration included) crafted on top of **Tabler**, an open-source **Bootstrap** design.
 
-- [Django Admin Tabler](https://app-generator.dev/docs/products/django-libs/theme-tabler.html) - Documentation & Support Links
+- [Django Admin Tabler](https://app-generator.dev/docs/products/django-libs/theme-tabler.html) - **Documentation** & Support Links
 - [Django Tabler](https://app-generator.dev/product/tabler/django/) - The product that uses the library
 - [Getting Started with Django](https://app-generator.dev/docs/technologies/django/index.html) - Learn how to code **Django** Projects
 

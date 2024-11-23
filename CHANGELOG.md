@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [1.0.4] 2024-11-23
+### Changes
+
+- Fixes for Django 5.1
+  - `length_is` deprecation
+  - include `l10n` for localisation 
+
 ## [1.0.3] 2024-11-07
 ### Changes (minor)
 
