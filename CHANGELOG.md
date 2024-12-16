@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [1.0.5] 2024-12-16
+### Changes
+
+- Mention [Django App Generator - Tabler Design](https://app-generator.dev/tools/django-generator/tabler/)
+
 ## [1.0.4] 2024-11-23
 ### Changes
 
